@@ -110,4 +110,6 @@ Understanding computational complexity is one of the first quintessential differ
 
 ### A note on sources
 
-I am actually unable to find a source for this that I'm satisfied with. If you would like to run some C++ code that demonstrates the doubling algorithm, run the main function in `vector_example.cpp`. I feel like there must be a research paper that explains this algorithm (unless it's so simple that it doesn't need a paper citation?), but if it exists I can't find it. I might write an explanation myself and post it online.
+I am actually unable to find a source for this that I'm satisfied with. If you would like to run some C++ code that demonstrates the doubling algorithm, run the main function in `vector_example.cpp`. The rest of the note gets into some subjects that are beyond this course.
+
+It seems like the exact algorithm used for reallocation is dependent on the specific compiler. My machine runs `g++` and appears to follow this doubling behavior for the first 9 insertions. A little bit of digging into either cplusplus.com or cppreference.com suggests that the C++ standard leaves the exact details up to implementation, so long as the end result is that `push_back` is amortized O(1). The algorithm I presented above is probably the simplest way to achieve this O(1) complexity; I'm sure that somewhere out there is a more advanced method that works better in *some* cases (although I'd be surprised if there was something theoretically or empirically proven to be better in the average case).   
