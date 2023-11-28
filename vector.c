@@ -33,10 +33,11 @@ unsigned int vector_get_capacity(vector* v_ptr) {
 // TODO: complete this function.
 
 // vector_reallocate should do the following:
-    // 1. Allocates a new array that has double the capacity of current _cap value.
-    // 2. Copies the contents of the current internal array into the new array.
-    // 3. Points the member variable _arr to the new array.
-    // 4. Frees the old (no longer pointed to) array.
+    // 1. Doubles the _cap value. 
+    // 2. Allocates a new array with the updated _cap value.
+    // 3. Copies the contents of the current internal array into the new array.
+    // 4. Frees the old array.
+    // 5. Points the member variable _arr to the new array.
 // HINT: since you are using an int* vector, keep in mind that ints are 4 bytes 
 // (on most modern machines like the ones you are using).
 void vector_reallocate(vector* v_ptr) {
