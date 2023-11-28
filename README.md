@@ -8,7 +8,7 @@ You should need to **add all files (.h and .c) to the project** in CodeBlocks; o
 
 ---
 
-Download all files in this repository and upload them to a CodeBlocks project. Complete the warmup functions in `warmup.c` and the member functions of `vector` in `vector.c`. You can use the main function in `lab07.c` for testing.
+Download all files in this repository and upload them to a CodeBlocks project. Complete the member functions of `vector` in `vector.c`. You can use the main function in `vector.c` for testing.
 
 If you would like to run these files in a Unix environment outside of CodeBlocks, you can run `make lab07` in the command line. This will compile and execute your program for you. You will need to ensure that `make` and `gcc` are both installed in your environment. 
 
