@@ -22,7 +22,7 @@ The concepts covered here are typically part of the second year of classes for a
 
 For our purposes, C++ is C with extra functionality. There is a lot more to this, especially with changes to the C++ language from 2011 onwards, but they require more time and effort to discuss than what would be appropriate for this class.
 
-C++ uses something called classes to implement data structures - read more here in English ([https://learn.microsoft.com/en-us/cpp/cpp/class-cpp?view=msvc-170](https://learn.microsoft.com/en-us/cpp/cpp/class-cpp?view=msvc-170)) or Polish ([https://learn.microsoft.com/pl-pl/cpp/cpp/class-cpp?view=msvc-170](https://learn.microsoft.com/pl-pl/cpp/cpp/class-cpp?view=msvc-170)). `vector` is one of these data structures, and you will be implementing some of the basic functionality of `vector` for this lab.
+C++ uses something called classes to implement data structures - if you would like (this won't help much with today's problem set), read more here in English ([https://learn.microsoft.com/en-us/cpp/cpp/class-cpp?view=msvc-170](https://learn.microsoft.com/en-us/cpp/cpp/class-cpp?view=msvc-170)) or Polish ([https://learn.microsoft.com/pl-pl/cpp/cpp/class-cpp?view=msvc-170](https://learn.microsoft.com/pl-pl/cpp/cpp/class-cpp?view=msvc-170)). `vector` is one of these data structures, and you will be implementing some of the basic functionality of `vector` for this lab.
 
 `vector` acts as an extension of C arrays. The main difference is that `vector` does not have a fixed size like arrays do; the programmer can add as many elements as they want, and `vector` will resize itself to fit those elements. The resizing process relies on dynamic memory allocation as follows.
 
@@ -77,6 +77,8 @@ Capacity is still 4. Let's push back now and exceed capacity:
 ```
 |x|x|x|x|x| | | |
 ```
+
+The vector's size is 5 now. Capacity has now doubled to 8.
 
 From here the pattern becomes pretty clear. We can push back three times without exceeding capacity. When we push back a fourth time afterward, we will double the capacity again to 16. This is how the vector looks if we push back 4 times:
 
