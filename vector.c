@@ -13,7 +13,7 @@ typedef struct v {
 // Initializes v_ptr with empty array, 0 size and capacity.
 void vector_init(vector* v_ptr) {
     // Consider this after completing 
-    v_ptr->_arr = malloc(0);
+    v_ptr->_arr = (int*) malloc(0);
     v_ptr->_sz = 0;
     v_ptr->_cap = 0;
 }
